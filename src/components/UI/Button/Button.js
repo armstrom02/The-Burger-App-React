@@ -5,9 +5,10 @@ const button = (props) => {
     let btnClass = ['Button'];
     btnClass.push(props.btnType);
     btnClass = btnClass.join(' ');
-    
-    return(
+
+    return (
         <button
+            disabled={props.disabled}
             className={btnClass}
             onClick={props.clicked}>{props.children}</button>
     )
